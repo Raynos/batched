@@ -65,6 +65,9 @@ batched(asyncThing)
     .on("error", function () {
         // No errors!
     })
+    .once("finish", function () {
+        console.log("finished")
+    })
 
 console.log("go chain go!")
 
