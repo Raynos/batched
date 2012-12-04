@@ -39,6 +39,11 @@ batched(asyncThing)
     .set("hello", "world")
     .del("1")
     .del("2")
+    .get("3", function (err, result) {
+        console.log("result", result)
+    })
     .getAll(function (err, results) {
         console.log("results!", results)
     })
+
+console.log("go chain go!")
