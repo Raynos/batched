@@ -45,5 +45,11 @@ batched(asyncThing)
     .getAll(function (err, results) {
         console.log("results!", results)
     })
+    .on("error", function () {
+        // no errors!
+    })
+    .once("finish", function () {
+        console.log("finished")
+    })
 
 console.log("go chain go!")

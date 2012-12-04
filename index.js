@@ -98,6 +98,8 @@ function exec(batch) {
 
             if (context.length !== 0) {
                 loop()
+            } else {
+                batch.emit("finish")
             }
         }
     }
